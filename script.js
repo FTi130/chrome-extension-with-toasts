@@ -42,6 +42,9 @@ chrome.extension.onRequest.addListener(handleRequest);
 
 var sidebarOpen = false;
 
+
+
+
 async function toggleSidebar() {
 
 	if(sidebarOpen) {
@@ -54,14 +57,14 @@ async function toggleSidebar() {
 
 		let permission = await Notification.requestPermission();
 
-		let greeting = new Notification('Hi, How are you?',{
-			body: 'Have a good day',
-			icon: 'empty_16'
-		});
-		greeting.close();
-
-
-		var toast = document.createElement('toast')
+		// let greeting = new Notification('Hi, How are you?',{
+		// 	body: 'Have a good day',
+		// 	icon: 'empty_16'
+		// });
+		// greeting.close();
+		//
+		//
+		// var toast = document.createElement('toast')
 
 		var sidebar = document.createElement('div');
 
@@ -75,9 +78,7 @@ async function toggleSidebar() {
 		\<br />\
 		\<br />\
 		\<br />\
-	 \<button onclick='alert(`Permission is ${Notification.permission}`)'\
-\
-		<p style='text-align: center'>Here you can click buttons but idk what's next</p>\
+		\
 		 \
 		 \
 	 \<button onclick='alert(`Permission is ${Notification.permission}`)'\
@@ -86,16 +87,40 @@ async function toggleSidebar() {
 		\<br />\
 		\<br />\
 			\
-			\ <button onclick='setTimeout(() => new Notification(`Hi, How are you?`,{\
-			\	body: `Have a good day`,\
+			\ <button onclick='setTimeout(() => new Notification(`Stripe Refunded`,{\
+			\	body: `Thank god`,\
 			\	icon: `http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png`\
 			\ })\
-             \ .close(), 1000);'\
-\
+             \ .close(), 500);'\
+		\
 		\ style='background: blueviolet; border-radius: 7px; cursor: pointer '>\
-\
-\ Toasts!</button>\
+		\
+		\ Refund Stripe Transaction</button>\
+		\
+		\<br />\
+		\ <button onclick='setTimeout(() => new Notification(`Shipping Address Changed`,{\
+					\	body: `And we know where you live`,\
+					\	icon: `http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png`\
+					\ })\
+					 \ .close(), 1000);'\
+		\
+				\ style='background: dimgray; border-radius: 7px; cursor: pointer '>\
+		\
+		\ Change Shipping Address</button>\
 		 \
+		 \<br />\
+			\ <button onclick='setTimeout(() => new Notification(`Shopify Refunded`,{\
+			\	body: `But you still owe some money mate`,\
+			\	icon: `http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png`\
+			\ })\
+             \ .close(), 500);'\
+		\
+		\ style='background: dimgray; border-radius: 7px; cursor: pointer '>\
+		\
+		\ Refund Shopify</button>\
+		\
+		\
+		\
 		\
 		";
 
