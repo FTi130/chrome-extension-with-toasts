@@ -1,0 +1,28 @@
+{
+	"name": "Digital Brains",
+	"manifest_version": 2,
+	"description": "Creating a sidebar with a crazy z-index",
+	"version": "0.2",
+	"icons": {
+		"16": "empty_16.png",
+		"32": "empty_16.png",
+		"48": "empty_16.png"
+	},
+	"background": {
+		"page": "background.html"
+	},
+	"page_action": {
+		"default_icon": "empty_16.png",
+		"default_title": "DigitalBrain Extension"
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["script.js"]
+		}
+	],
+	"permissions": [
+		"tabs",
+		"notifications"
+	]
+}
