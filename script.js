@@ -74,6 +74,11 @@ async function toggleSidebar() {
 
 
 		sidebar.innerHTML= "\
+		\<button onclick='alert(`Permission is ${Notification.permission}`)'\
+	 \ style='background: slategray; border-radius: 7px; cursor: pointer '>\
+       \ ?</button>\
+       \
+       \
 		\<h1 style='margin: 50px auto; text-align: center'>Hi DigitalBrain</h1>\
 		\<br />\
 		\<br />\
@@ -81,11 +86,14 @@ async function toggleSidebar() {
 		\
 		 \
 		 \
-	 \<button onclick='alert(`Permission is ${Notification.permission}`)'\
-	 \ style='background: slategray; margin: 0 auto; border-radius: 7px; cursor: pointer '>\
-       \ Permissions!</button>\
+	 \
 		\<br />\
 		\<br />\
+			\
+			\
+			\
+			\
+			\<div style='display: flex; flex-direction: column '>\
 			\
 			\ <button onclick='setTimeout(() => new Notification(`Stripe Refunded`,{\
 			\	body: `Thank god`,\
@@ -93,7 +101,7 @@ async function toggleSidebar() {
 			\ })\
              \ .close(), 500);'\
 		\
-		\ style='background: blueviolet; border-radius: 7px; cursor: pointer '>\
+		\ style='background: dimgray; border-radius: 7px; cursor: pointer; margin: 10px auto '>\
 		\
 		\ Refund Stripe Transaction</button>\
 		\
@@ -104,7 +112,7 @@ async function toggleSidebar() {
 					\ })\
 					 \ .close(), 1000);'\
 		\
-				\ style='background: dimgray; border-radius: 7px; cursor: pointer '>\
+				\ style='background: dimgray; border-radius: 7px; cursor: pointer; margin: 10px auto '>\
 		\
 		\ Change Shipping Address</button>\
 		 \
@@ -115,11 +123,11 @@ async function toggleSidebar() {
 			\ })\
              \ .close(), 500);'\
 		\
-		\ style='background: dimgray; border-radius: 7px; cursor: pointer '>\
+		\ style='background: dimgray; border-radius: 7px; cursor: pointer; margin: 10px auto; left: 50vw '>\
 		\
 		\ Refund Shopify</button>\
 		\
-		\
+		\</div>\
 		\
 		\
 		";
@@ -131,7 +139,7 @@ async function toggleSidebar() {
 			right:0px;\
 			width:30%;\
 			height:100%;\
-			background:grey;\
+			background:#B4B4B4;\
 			z-index:999999;\
 			\
 		";
